@@ -1,0 +1,36 @@
+@mixin fun_link ($link: white) {
+  color: $link;
+  text-decoration: none;
+  font-style: italic;
+}
+
+
+
+@mixin fun_bottoni ($bottone: $btn-color) {
+  color: white;
+  background-color: $bottone;
+  border: 3px outset white;
+  padding: 10px;
+}
+
+
+
+@mixin fun_lista ($lista: column, $orient: center, $height: 15%, $width: 100%) {
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: $lista;
+  list-style-type: none;
+  justify-content: $orient;
+  width: 100%;
+
+
+  li {
+    height: $height;
+    width: $width;
+    display: flex;
+    align-items: center;
+  }
+
+}

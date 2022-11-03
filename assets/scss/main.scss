@@ -1,0 +1,61 @@
+@import "variable";
+@import "function";
+@import "mixin";
+
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  @include fun_bottoni;
+}
+
+header {
+  background-color: $bg-navbar;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0px 5px 10px $main-link-color;
+
+  ul {
+    @include fun_lista ($lista: row, $width: 10%, $orient: none);
+  }
+
+  a {
+    @include fun_link;
+  }
+}
+
+#main {
+  a {
+    @include fun_link ($link: $main-link-color);
+  }
+
+  article {
+    width: 65%;
+    padding-inline: 5%;
+  }
+
+  display: flex;
+  justify-content: center;
+  margin-inline: 25px;
+}
+
+aside {
+  display: flex;
+  height: 350px;
+  width: 220px;
+
+  ul {
+    @include fun_lista ($orient: space-around, $height: 90%);
+
+    li {
+      border-bottom: 2px dotted;
+    }
+  }
+}
